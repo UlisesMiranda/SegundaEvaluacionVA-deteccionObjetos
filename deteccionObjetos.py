@@ -99,27 +99,6 @@ los contornos y elimina los menos necesarios
 Lo siguiente es obtener los contornos que necesitaremos, en este caso, unicamente requerimos de 
 los contornos del jitomate 2 y del jitomate 4
 
-para 5%
-jito2 = c[2]
-jito4 = c[0]
-
-Para 15%
-jito2 = [2]
-jito4 = [0]
-
-Para 16%
-jito2 = c[3]
-jito4 = c[1]
-"""
-
-if porcentaje == 0.15:
-    jitomate2_contornos = contornos[2]
-    jitomate4_contornos = contornos[0]
-elif porcentaje == 0.05:
-    jitomate2_contornos = contornos[2]
-    jitomate4_contornos = contornos[0]
-    
-""" 
 Para el procesamiento de ambos jitomates, mi idea en general es ubicar un pequeño rectangulo que 
 abrace los contornos del jitomate, desde la raiz hasta la punta del jitomate.
 Con ello espero obtener los puntos medios de ambos extremos del rectangulo y realizar el calculo de 
@@ -131,6 +110,8 @@ es por eso que necesito de otro rectangulo con una inclinacion y medidas que se 
 area que abarque los contornos del jitomate; una vez obtenido el rectangulo, verifico las esquinas de este
 y obtengo los puntos medios que me permitan obtener una linea que cruce estos puntos y calcular la distancia
 """
+jitomate2_contornos = contornos[2]
+jitomate4_contornos = contornos[0]
 
 #Para jitomate 2
 jitomate2_img = imagen.copy()
